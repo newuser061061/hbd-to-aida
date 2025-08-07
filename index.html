@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تولد آیدا</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #CE93D8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #c2185b;
+      margin-top: 20px;
+      display: none;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    #birthdayImage {
+      width: 300px;
+      margin-top: 20px;
+      display: none;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease forwards;
+    }
+
+    #startButton {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #AB47BC;
+      color: white;
+      border: 2px solid #9C27B0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #startButton:hover {
+      background-color: #6a1b9a;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <button id="startButton">شروع جشن</button>
+
+  <h1 id="birthdayText">آیدا جان تولدت مبارک 🎉🎂</h1>
+  <img id="birthdayImage" src="/HBD/image/aida.jpg" alt="تولد آیدا">
+
+  <audio id="birthdayMusic" src="/HBD/music/Andy - Tavalod.mp3"></audio>
+
+  <script>
+    const button = document.getElementById('startButton');
+    const image = document.getElementById('birthdayImage');
+    const text = document.getElementById('birthdayText');
+    const music = document.getElementById('birthdayMusic');
+
+    button.addEventListener('click', () => {
+      // نمایش متن و عکس
+      image.style.display = 'block';
+      text.style.display = 'block';
+
+      // پخش موزیک
+      music.play();
+
+      // مخفی کردن دکمه
+      button.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
